@@ -1,17 +1,23 @@
-def input_integer_list(prompt):
-    return list(map(int, input(prompt).split()))
-
-list1 = input_integer_list("Enter the first list of integers : ")
-list2 = input_integer_list("Enter the second list of integers  : ")
-
-same_length = len(list1) == len(list2)
-
-same_sum = sum(list1) == sum(list2)
-
-common_values = set(list1) & set(list2)
-print("Are the lists of the same length ", same_length)
-print("Do the lists sum to the same value ", same_sum)
-if common_values:
-    print("Common values in both lists: ", common_values)
+list1=[]
+list2=[]
+list3=[]
+n1=int(input("Total elements in first list : "))
+for i in range(n1):
+    value=int(input("Input no : "))
+    list1.append(value)
+n2=int(input("Total elements in second list : "))
+for i in range(n2):
+    value=int(input("Input no : "))
+    list2.append(value)
+if(n1 == n2):
+    print("Same length")
 else:
-    print("There are no common values in both lists.")
+    print("Not same length ")
+
+if(sum(list1)==sum(list2)):
+    print("Same sum ")
+else:
+    print("Sum are different")
+
+list3=[each for each in list1 if each in list2]
+print("Same members are  :",list3)
