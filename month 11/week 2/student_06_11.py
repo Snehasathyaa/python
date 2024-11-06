@@ -1,3 +1,4 @@
+
 student = {
     "name": "Sneha",
     "roll_number": "54",
@@ -6,12 +7,14 @@ student = {
     "semester": "1 st"
 }
 
-print("\nstudent list:\n",student)
 
-student["total_mark"] = 88
+print("\nStudent list:\n\n", student)
 
-print("\n \n student list updated with adding total mark :\n",student)
+total_marks = int(input("\n\nEnter the total marks: "))
 
+student["total_mark"] = total_marks
+
+print("\n\nStudent list updated with total marks:\n\n", student)
 if student["total_mark"] >= 90:
     student["grade"] = "A"
 elif student["total_mark"] >= 82:
@@ -24,10 +27,8 @@ elif student["total_mark"] >= 50:
     student["grade"] = "P"
 else:
     student["grade"] = "F"
-print("\n \n student list updated with adding grade :\n",student)
 
-
+print("\n\nStudent list updated with grade:\n\n", student)
 
 del student["roll_number"]
-
-print("\n \n student list by  deleting roll number :\n",student)
+print("\n\nStudent list after deleting roll number:\n\n", student)
