@@ -30,4 +30,4 @@ print("\n \n student list updated with adding grade :\n",student)
 
 del student["roll_number"]
 
-print("\n \n student list by removing delete roll number :\n",student)
+print("\n \n student list by  deleting roll number :\n",student)
